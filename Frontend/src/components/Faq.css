@@ -1,0 +1,14 @@
+/* Faq.css */
+
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+  }
+  
+  .faq-content.open {
+    max-height: 200px; /* Adjust this as needed for your content */
+    opacity: 1;
+  }
+  

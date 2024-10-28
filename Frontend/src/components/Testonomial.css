@@ -1,0 +1,14 @@
+.testimonial-slider {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .testimonial-slider-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .testimonial-slide {
+    min-width: 100%;
+  }
+  

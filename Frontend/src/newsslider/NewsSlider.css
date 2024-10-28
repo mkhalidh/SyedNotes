@@ -1,0 +1,32 @@
+/* NewsSlider.css */
+.slider {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background: #692f95;
+    color: #fff;
+    margin-top: 60px; /* Adjust this value based on the height of your Navbar */
+}
+
+.slider-content {
+    display: inline-block;
+    white-space: nowrap;
+    /* padding: 10px; */
+    animation: scroll 25s linear infinite;
+}
+
+.news-item {
+    display: inline-block;
+    padding: 0 50px;
+    font-size: 16px;
+    line-height: 40px;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

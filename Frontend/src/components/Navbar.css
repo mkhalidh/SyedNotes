@@ -1,0 +1,13 @@
+.dropdown-content {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-10px); /* Slightly move it up */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transition properties */
+    pointer-events: none; /* Prevent interaction when hidden */
+  }
+  
+  .dropdown-content.show {
+    opacity: 1; /* Make it visible */
+    transform: translateY(0); /* Move it to original position */
+    pointer-events: auto; /* Allow interaction */
+  }
+  

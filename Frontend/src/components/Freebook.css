@@ -1,0 +1,63 @@
+/* Freebook.css */
+
+/* Custom slider arrows */
+.custom-arrow {
+  width: 40px; /* Adjust width as needed */
+  height: 40px; /* Adjust height as needed */
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Adjust font size for better visibility */
+  cursor: pointer;
+  border-radius: 50%; /* Circular buttons */
+  z-index: 10;
+}
+
+.custom-arrow-prev {
+  left: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.custom-arrow-next {
+  right: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Slider slide styles */
+.slider-slide {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden; /* Ensure content does not overflow */
+}
+
+.slider-slide img {
+  width: 80%;
+  margin-left: 30px;
+  justify-content: center;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.slider-slide img:hover {
+  transform: scale(1.05); /* Zoom effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+/* Caption styles */
+.slider-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px; /* Adjust font size */
+}

@@ -1,0 +1,67 @@
+/* src/components/Card.css */
+.card {
+    position: relative;
+    width: 300px; 
+    height: 200px; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); 
+  }
+  
+  .card-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease-in-out; 
+    opacity: 0; 
+  }
+  
+  .card-image.fade-in {
+    opacity: 1; 
+  }
+  
+  .card-image.fade-out {
+    opacity: 0; 
+  }
+  
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    text-align: center;
+    padding: 20px; /* Ensure content has enough padding */
+    box-sizing: border-box;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for content visibility and movement */
+    opacity: 0; /* Start with invisible */
+    transform: translateY(20px); /* Start slightly lower */
+  }
+  
+  .card:hover .card-content {
+    opacity: 1; /* Show content on hover */
+    transform: translateY(0); /* Move to original position */
+  }
+  
+  .card-heading {
+    margin: 0;
+    font-size: 1.8em; /* Increase font size for better visibility */
+    font-weight: bold; /* Make text bold */
+    line-height: 1.2; /* Adjust line height if needed */
+  }
+  

@@ -1,0 +1,124 @@
+.contact-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    padding: 20px;
+  }
+  
+  .contact-form-wrapper {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .form-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #692f95;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-form .submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #692f95;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form .submit-button:hover {
+    background-color: #573b7c;
+  }
+  
+  /* Shapes */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(105, 47, 149, 0.2);
+    z-index: 1;
+  }
+  
+  .circle1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+  }
+  
+  .circle2 {
+    width: 150px;
+    height: 150px;
+    bottom: -75px;
+    right: -50px;
+  }
+  
+  .triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    z-index: 1;
+  }
+  
+  .triangle1 {
+    border-bottom: 100px solid rgba(105, 47, 149, 0.2);
+    top: 50px;
+    right: -50px;
+  }
+  
+  .triangle2 {
+    border-top: 100px solid rgba(105, 47, 149, 0.2);
+    bottom: 50px;
+    left: -50px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .circle1,
+    .circle2 {
+      display: none; /* Hide shapes on mobile for cleaner view */
+    }
+  
+    .triangle1,
+    .triangle2 {
+      display: none;
+    }
+  
+    .contact-form-wrapper {
+      padding: 20px;
+    }
+  }
+  

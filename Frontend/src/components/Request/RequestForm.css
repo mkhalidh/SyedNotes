@@ -1,0 +1,110 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Custom slider arrows */
+  .custom-arrow {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .custom-arrow-prev {
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .custom-arrow-next {
+    right: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Slider slide styles */
+  .slider-slide {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .slider-slide img {
+    width: 100%; /* Ensure it takes full width */
+    margin-left: 0; /* Remove extra space */
+    justify-content: center;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .slider-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Caption styles */
+  .slider-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  /* Comment form styles */
+  textarea {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 12px;
+    resize: none;
+    height: 100px;
+    width: 100%;
+    margin: 0; /* Ensure no extra margin */
+  }
+  
+  button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0; /* Ensure no extra margin */
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  .comments-list {
+    margin-top: 20px;
+  }
+  
+  .comments-list .comment {
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .comment p {
+    margin: 0;
+  }
+  

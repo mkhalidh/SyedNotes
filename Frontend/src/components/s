@@ -1,0 +1,132 @@
+import React, { useEffect, useRef } from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import man from "../../public/hammad.jpg";
+import man2 from "../../public/khalid2.jpg";
+import landscape from "../../public/books/book15.jpg";
+import { gsap } from "gsap";
+import { gsap } from "gsap";
+// Placeholder URLs for images and profile links
+const developerImage = man2; 
+const contributorImage = man; 
+const developerLinkedIn = "https://www.linkedin.com/in/muhammad-khalid-hussain-384752202/"; 
+const developerGitHub = "https://github.com/mkhalidh"; 
+const developerLeetCode = "https://leetcode.com/u/mkhalidh/"; 
+const contributorLinkedIn = "https://www.linkedin.com/in/hammad-kashmiri-b24810291?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ";
+const landscapeImage = landscape;
+
+function About() {
+  const developerSection = useRef(null);
+  const contributorSection = useRef(null);
+
+  useEffect(() => {
+    // GSAP Animations
+    gsap.from(".about-page h1", { opacity: 0, y: -50, duration: 1.2, ease: "power3.out" });
+    gsap.from(".about-page p", { opacity: 0, y: 50, duration: 1, delay: 0.3, ease: "power3.out" });
+
+    gsap.from(developerSection.current, {
+      opacity: 0,
+      x: -100,
+      duration: 1,
+      delay: 0.5,
+      ease: "power3.out",
+    });
+
+    gsap.from(contributorSection.current, {
+      opacity: 0,
+      x: 100,
+      duration: 1,
+      delay: 0.7,
+      ease: "power3.out",
+    });
+  }, []);
+
+  return (
+    <>
+      <Navbar />
+      <div className="about-page container mx-auto py-16 px-6">
+        {/* Intro Section with Landscape Image */}
+        <section
+          className="relative mb-16"
+          style={{
+            backgroundImage: `url(${landscapeImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            height: "400px",
+          }}
+        >
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="relative text-center text-white py-16 px-6">
+            <h1 className="text-4xl font-bold mb-4">Welcome to Our Platform</h1>
+            <p className="text-lg mb-6">
+              We are a team of dedicated professionals combining technical expertise with creativity to deliver innovative solutions. Explore our platform and meet the talented individuals behind it.
+            </p>
+          </div>
+        </section>
+
+        {/* Section for Developer */}
+        <section
+          className="about-section flex flex-col md:flex-row items-center justify-between mb-16"
+        
+          
+        >
+          <div className="about-text md:w-1/2 text-center md:text-left order-2 md:order-1">
+            <h2 className="text-3xl font-bold mb-4">Meet the Developer (Khalid)</h2>
+            <p className="text-lg mb-4">
+              Our developer excels in the MERN stack (MongoDB, Express.js, React, Node.js), Java, and Python, bringing a deep understanding of modern web technologies.
+            </p>
+            <div className="flex justify-center md:justify-start space-x-4">
+              <a href={developerLinkedIn} target="_blank" rel="noopener noreferrer">
+                {/* LinkedIn Icon */}
+              </a>
+              <a href={developerGitHub} target="_blank" rel="noopener noreferrer">
+                {/* GitHub Icon */}
+              </a>
+              <a href={developerLeetCode} target="_blank" rel="noopener noreferrer">
+                {/* LeetCode Icon */}
+              </a>
+            </div>
+          </div>
+          <div className="about-image md:w-1/2 mb-8 md:mb-0 order-1 md:order-2">
+            <img
+              src={developerImage}
+              alt="Developer"
+              className="rounded-lg shadow-lg w-full md:w-3/4 mx-auto"
+            />
+          </div>
+        </section>
+
+        {/* Section for Content Contributor */}
+        <section
+          className="about-section flex flex-col md:flex-row items-center justify-between"
+          ref={contributorSection}
+        >
+          <div className="about-image md:w-1/2 mb-8 md:mb-0">
+            <img
+              src={contributorImage}
+              alt="Content Contributor"
+              className="rounded-lg shadow-lg w-full md:w-3/4 mx-auto"
+            />
+          </div>
+          <div className="about-text md:w-1/2 text-center md:text-left">
+            <h2 className="text-3xl font-bold mb-4">Content Contributor (Hammad)</h2>
+            <p className="text-lg mb-4">
+              A Frontend Developer and Android Mobile App Developer, with a deep understanding of software engineering practices.
+            </p>
+            <a
+              href={contributorLinkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800"
+            >
+              {/* LinkedIn Icon */}
+            </a>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+}
+
+export default About;

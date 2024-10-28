@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* Body styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #dcb3e38b;
+}
+
+/* Custom Scrollbar for desktop */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #5c2b73; /* Dark purple color for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #88cc88; /* Soft pastel green color for the scrollbar thumb */
+  border-radius: 10px; /* Rounded edges for the scrollbar thumb */
+  border: 2px solid #5c2b73; /* Matching border with the dark purple track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #c88ad3; /* Slightly darker green on hover */
+}
+
+/* For Internet Explorer and Edge (old versions) */
+body {
+  scrollbar-color: #88cc88 #5c2b73; /* Thumb color (pastel green) and track color (dark purple) */
+  scrollbar-width: thin; /* Make scrollbar narrower */
+} /* <-- Close this body block here */
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px; /* Make scrollbar thinner on mobile */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #88cc88; /* Same soft pastel green for mobile */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #5c2b73; /* Dark purple track on mobile */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #66aa66; /* Darker green on hover for mobile */
+  }
+
+  body {
+    scrollbar-width: thin; /* Thin scrollbar width on mobile */
+  }
+}
+
+
+::selection {
+  background-color: #FED230;  /* Changes the background color of the selected text */
+  color: black;  /* Changes the text color of the selected text */
+}
