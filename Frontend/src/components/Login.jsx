@@ -13,7 +13,7 @@ function Login() {
       email: data.email,
       password: data.password,
     };
-    const apiUrl = "syed-notes-backend.vercel.app/user/login"; // Use import.meta.env for Vite
+    const apiUrl = "https://syed-notes-backend.vercel.app/user/login"; // Use import.meta.env for Vite
     await axios
       .post(apiUrl, userInfo)
       .then((res) => {
