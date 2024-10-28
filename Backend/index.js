@@ -20,6 +20,14 @@ app.use(express.json());
 const PORT = process.env.PORT || 4001;  // Default to 4001 if not specified
 const URI = process.env.MongoDBAtlasURI;
 
+app.get("/",(req,res)=>{
+    res.json({
+        success:true,
+        message: "Syed Notes API is running"  // Replace this message with your own API description or use a more descriptive message.
+    })
+})
+
+
 // Connect to MongoDB
 mongoose.connect(URI, {
     useNewUrlParser: true,
