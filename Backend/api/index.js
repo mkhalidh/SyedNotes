@@ -12,10 +12,11 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin:"https://syednotes.vercel.app",
-    methods:["POST"],
-    credentials:true
+    origin: "https://syednotes.vercel.app",  // Make sure this is the exact frontend URL
+    methods: ["POST", "GET"],
+    credentials: true
 }));
+
 app.use(express.json());
 
 const PORT = process.env.PORT || 4001;  // Default to 4001 if not specified
