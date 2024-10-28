@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 
-import bookRoute from "../route/book.route.js";
+// import bookRoute from "../route/book.route.js";
 import userRoute from "../route/user.route.js";
 
 // Load environment variables from .env file
