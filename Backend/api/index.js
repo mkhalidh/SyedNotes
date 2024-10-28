@@ -44,7 +44,7 @@ mongoose.connect(URI, {
 
 console.log(URI)
 // Defining routes
-app.use("/book", bookRoute);
+// app.use("/book", bookRoute);
 app.use("/user", userRoute);
 
 app.listen(PORT,'0.0.0.0', () => {
