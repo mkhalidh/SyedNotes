@@ -12,7 +12,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: "https://syednotes.vercel.app",  // Make sure this is the exact frontend URL
+    origin: "https://syednotes.vercel.app/",  // Make sure this is the exact frontend URL
     methods: ["POST", "GET"],
     credentials: true
 }));
