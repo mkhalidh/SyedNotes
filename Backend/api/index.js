@@ -13,7 +13,7 @@ const app = express();
 
 app.use(cors({
     origin:"https://syednotes.vercel.app",
-   
+    methods:["POST"],
     credentials:true
 }));
 app.use(express.json());
