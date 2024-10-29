@@ -20,7 +20,7 @@ function Signup() {
     };
     // https://your-backend-url.com/user/signup
     await axios
-      .post("https://syed-notes-backend.vercel.app/user/signup", userInfo)
+      .post("https://syednotes-backend.vercel.app/user/signup", userInfo)
       .then((res) => {
         if (res.data) {
           toast.success("Signup Successfully");
